@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="IBJJF Uniform Requirements prototype, updated for rules effective 1 January 2027.">
+  <title>Uniform | IBJJF (2027 prototype)</title>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="https://ibjjf.com/" title="IBJJF">
+        <img src="assets/img/logo-ibjjf.svg" alt="IBJJF">
+      </a>
+      <div class="header-brand">
+        <span class="org">International Brazilian Jiu-Jitsu Federation</span>
+        <span class="page">Uniform</span>
+      </div>
+      <div class="header-actions">
+        <span class="chip">Effective 1 January 2027</span>
+        <button type="button" class="toggle" id="toggle-2027" aria-pressed="false">
+          <span class="switch" aria-hidden="true"></span>
+          Highlight 2027 changes
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <p class="banner-proto">Interactive prototype of the IBJJF Uniform page, updated for the rules effective 1 January 2027. This is not the live site.</p>
+
+    <div class="hero">
+      <h1 class="page-title">IBJJF Uniform Requirements</h1>
+      <p class="lead">Requirements for Gi and No-Gi uniforms at IBJJF competitions, including official measurements, colors, patches, and the manufacturer color standard. <span class="muted">The 2027 No-Gi updates below replace the previous rash-guard color rule and shorts-length wording in article 8.1.16.</span></p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Uniform sections">
+      <button type="button" class="tab" role="tab" data-tab="gi" aria-selected="true" aria-controls="panel-gi" id="tab-gi">Gi</button>
+      <button type="button" class="tab" role="tab" data-tab="nogi" aria-selected="false" aria-controls="panel-nogi" id="tab-nogi">No-Gi</button>
+      <button type="button" class="tab" role="tab" data-tab="colors" aria-selected="false" aria-controls="panel-colors" id="tab-colors">Belts &amp; Colors</button>
+      <button type="button" class="tab" role="tab" data-tab="patches" aria-selected="false" aria-controls="panel-patches" id="tab-patches">Patches</button>
+      <button type="button" class="tab" role="tab" data-tab="makers" aria-selected="false" aria-controls="panel-makers" id="tab-makers">Manufacturers</button>
+    </div>
+
+    <!-- GI -->
+    <section class="panel is-active" id="panel-gi" role="tabpanel" aria-labelledby="tab-gi">
+      <article class="card">
+        <h2>GI Material</h2>
+        <p class="rule">GIs should be tailored using cotton or cotton-like fabric only. The fabric should not be so thick or hard as to impede an opponent from gripping it. A GI fashioned from woven fabric is mandatory for all age divisions. It is permitted to wear kimono with EVA or similar material inside the collar, if the measures of size and rigidity regulations provided in the IBJJF Rules Book are followed.</p>
+      </article>
+
+      <article class="card">
+        <h2>GI Color</h2>
+        <p class="rule">GIs must be of uniform color. The following colors are permissible: white, royal blue or black. Gis with tops and pants of different colors are not permitted; nor are GIs with a collar that is a different color than the rest of the top. Painted GIs are forbidden, unless the paint is designed in the form of an academy or sponsor logo – and only on regions of the GI where patches are permitted. Even in cases where they are permitted, the athlete will be obliged to change GIs should the paint mark the GI of the opponent.</p>
+        <p class="note">Official color codes (including Royal Blue 19-3955 TCX) are in <a href="#colors">Belts &amp; Colors</a> and the Uniform Manual for Manufacturers. Navy blue is not allowed.</p>
+      </article>
+
+      <article class="card">
+        <h2>GI Measurements</h2>
+        <p class="rule">The GI top should reach the athlete’s thigh and the sleeves should come to no more than 2 cm from the athlete’s wrist when the arm is extended straight parallel to the ground. GI pants should reach no more than 2 cm above the tibial malleolus (ankle bone).</p>
+        <p class="rule">The inspection will verify whether the following official measurements are met: GI lapel thickness (1.3 cm), width of GI collar (5 cm), opening of sleeve at full extension (7 cm).</p>
+
+        <div class="gi-explorer">
+          <div>
+            <h3>Color explorer</h3>
+            <div class="gi-preview" id="gi-preview">
+              <svg viewBox="0 0 200 280" aria-hidden="true">
+                <circle cx="100" cy="22" r="11" fill="#c5c5c5"/>
+                <!-- sleeves -->
+                <path class="gi-body" d="M38 58 L8 78 L18 118 L50 98 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+                <path class="gi-body" d="M162 58 L192 78 L182 118 L150 98 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+                <!-- jacket -->
+                <path class="gi-body" d="M50 50 L100 58 L150 50 L158 160 L42 160 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.8" stroke-linejoin="round"/>
+                <!-- lapel -->
+                <path d="M100 58 L78 160" fill="none" stroke="#222" stroke-width="1.5"/>
+                <path d="M100 58 L130 118 L130 160" fill="none" stroke="#222" stroke-width="1.5"/>
+                <path d="M88 36 h24 v22 h-24 z" fill="#e8e8e8" stroke="#222" stroke-width="1.2"/>
+                <!-- belt -->
+                <rect x="40" y="156" width="120" height="12" fill="#232020"/>
+                <rect x="92" y="154" width="16" height="16" fill="#1a1a1a"/>
+                <!-- pants -->
+                <path class="gi-body" d="M58 168 L96 168 L94 250 L62 250 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+                <path class="gi-body" d="M104 168 L142 168 L138 250 L106 250 Z" fill="#f4f4f4" stroke="#222" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+              <p id="gi-color-label" style="font-family:var(--font-display);font-weight:700;text-transform:uppercase;margin:.4rem 0 0;">White</p>
+              <p id="gi-color-note" class="caption">Permissible GI colors: white, royal blue or black. Swatches are approximate.</p>
+            </div>
+            <div class="belt-row" style="margin-top:.8rem;">
+              <button type="button" class="belt-btn white" data-gi-color="#f4f4f4" data-name="White" data-allowed="true" data-note="Permissible GI color. Official reference: PMS White (no official TCX color is named simply “White”)." aria-pressed="true">White</button>
+              <button type="button" class="belt-btn blue" data-gi-color="#3e428c" data-name="Royal Blue" data-allowed="true" data-note="Permissible GI color. Official reference: Pantone 19-3955 TCX Royal Blue. Navy blue is not allowed. Swatches are approximate.">Royal Blue</button>
+              <button type="button" class="belt-btn black" data-gi-color="#232020" data-name="Black" data-allowed="true" data-note="Permissible GI color. Official reference: Pantone 19-4003 TCX Black Onyx. Swatches are approximate.">Black</button>
+              <button type="button" class="belt-btn" data-gi-color="#0a1f4d" data-name="Navy blue (not allowed)" data-allowed="false" data-note="Navy blue is not allowed." style="background:#0a1f4d;color:#fff;">Navy (not allowed)</button>
+            </div>
+          </div>
+          <div>
+            <h3>Measurement explorer</h3>
+            <p class="caption">Select a numbered point on the official figure, or click the image to zoom.</p>
+            <div class="measure-map">
+              <img src="assets/img/site/gi-measurements.jpg" alt="Official GI measurement figure: sleeve, collar, belt, jacket length and ankle distances." data-zoom="assets/img/site/gi-measurements.jpg" tabindex="0">
+              <button type="button" class="hotspot" style="left:31%;top:37%;" data-measure="wrist" aria-pressed="false" title="Sleeves at the wrist">1</button>
+              <button type="button" class="hotspot" style="left:31%;top:51%;" data-measure="length" aria-pressed="false" title="Jacket length">2</button>
+              <button type="button" class="hotspot" style="left:28%;top:88%;" data-measure="ankle" aria-pressed="false" title="Pants at the ankle">3</button>
+              <button type="button" class="hotspot" style="left:52%;top:30%;" data-measure="sleeve" aria-pressed="false" title="Sleeve opening">4</button>
+              <button type="button" class="hotspot" style="left:72%;top:35%;" data-measure="collar" aria-pressed="false" title="Collar and lapel">5</button>
+              <button type="button" class="hotspot" style="left:74%;top:47%;" data-measure="belt" aria-pressed="false" title="Belt">6</button>
+            </div>
+            <div class="measure-detail" id="measure-detail">
+              <strong id="measure-title">Select a point</strong>
+              <p id="measure-text" class="rule" style="margin:.35rem 0 0;">Use the numbered markers to read the official measurement for that part of the GI.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Belt requirements</h2>
+        <p class="rule">Athletes should use a durable, 4 to 5 cm wide belt colored according to the athlete’s rank, with a black tip – except for black belts, where the tip should be white or red. The belt should be worn over the top, wrap around the waist twice, and be tied using a double knot tight enough to hold the GI top closed. Once tied in a double knot, each end of the belt should hang 20 to 30 cm in length.</p>
+        <figure class="media-fig" style="max-width:520px;margin-top:1rem;">
+          <img src="assets/img/pdf/belt-manual.png" alt="Belt knot diagram: manufacturer label only at the tip (A); black tip with white or red end (B)." data-zoom="assets/img/pdf/belt-manual.png" tabindex="0">
+          <figcaption class="caption">A — manufacturer label only at the tip of the belt. B — black tip (white or red tip for black belts). From the Uniform Manual for Manufacturers. Click to zoom.</figcaption>
+        </figure>
+      </article>
+
+      <article class="card">
+        <h2>Other Requirements</h2>
+        <p class="rule">Use of a shirt under the GI top is prohibited, except for women. In the female divisions, it is mandatory for the use of a stretchy or elastic shirt that hugs the body beneath the GI; it can be short or long sleeved, without the necessity to follow the color requirements. It is also permitted for athlete’s to use a one piece swim garment (bathing suit) or gymnastics top.</p>
+        <p class="rule">Wearing pants of any kind under GI pants is prohibited, except for women, who are permitted to use pants made of elastic fabric (clings to body) under the GI pants, as long as these pants are shorter than the GI pants.</p>
+        <p class="rule">Athletes must use undergarments. The use of thong-type undergarments is not permitted; only briefs-type undergarments.</p>
+        <p class="rule">GIs may not exhibit mending or tears, be wet or dirty or emanate unpleasant odors.</p>
+      </article>
+    </section>
+
+    <!-- NO-GI -->
+    <section class="panel" id="panel-nogi" role="tabpanel" aria-labelledby="tab-nogi">
+      <article class="card" data-year="2027">
+        <h2><span class="change-badge">2027</span> Shirts and Rash Guards</h2>
+        <p class="rule">Both genders must wear a shirt of elastic material (skin tight) long enough to cover the torso all the way to the waistband of the shorts, colored black, white, or black and white, and, for colored belts (grey, yellow, orange, green, blue, purple and brown), with at least 10% of the rank color (belt) to which the athlete belongs. The rank color must be placed so that the athlete’s rank (belt) can be clearly identified whether the athlete is seen from the front or from the back. Shirts 100% the color of the athlete’s rank (belt) are also permitted.</p>
+        <p class="rule">White belts: predominantly white (more than 50% of the surface); the only secondary color allowed is black.</p>
+        <p class="rule">Black belts: predominantly black (more than 50% of the surface); the only secondary color allowed is white.</p>
+        <p class="rule">Note: For black belts a small red area will be tolerated, but must not de-characterize the athlete’s rank color.</p>
+        <p class="cite">Art. 8.1.16, effective 1 January 2027.</p>
+      </article>
+
+      <article class="card">
+        <h2>Select a belt</h2>
+        <p class="caption">Choose a rank to see the allowed No-Gi rash guard colors and the official rule for that belt.</p>
+        <div class="belt-row" role="group" aria-label="Belt rank">
+          <button type="button" class="belt-btn white" data-belt="white" aria-pressed="false">White</button>
+          <button type="button" class="belt-btn grey" data-belt="grey" aria-pressed="false">Grey</button>
+          <button type="button" class="belt-btn yellow" data-belt="yellow" aria-pressed="false">Yellow</button>
+          <button type="button" class="belt-btn orange" data-belt="orange" aria-pressed="false">Orange</button>
+          <button type="button" class="belt-btn green" data-belt="green" aria-pressed="false">Green</button>
+          <button type="button" class="belt-btn blue" data-belt="blue" aria-pressed="true">Blue</button>
+          <button type="button" class="belt-btn purple" data-belt="purple" aria-pressed="false">Purple</button>
+          <button type="button" class="belt-btn brown" data-belt="brown" aria-pressed="false">Brown</button>
+          <button type="button" class="belt-btn black" data-belt="black" aria-pressed="false">Black</button>
+        </div>
+        <div class="belt-result">
+          <figure class="media-fig">
+            <img id="belt-photo" class="belt-photo" src="assets/img/nogi/en_blue.jpg" alt="Example No-Gi rash guard colors for a blue belt" data-zoom="assets/img/nogi/en_blue.jpg" tabindex="0">
+            <figcaption class="caption">Example photos. Click to zoom. Official color codes are in Belts &amp; Colors.</figcaption>
+          </figure>
+          <div>
+            <h3 id="belt-title">Blue belt — No-Gi rash guard</h3>
+            <p class="rule" id="belt-rule" data-year="2027"></p>
+            <div class="allowed-chips" id="belt-chips"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-year="2027">
+        <h2><span class="change-badge">2027</span> Shorts — length (men and women)</h2>
+        <p class="rule">Shorts (men and women): must not be longer than the knee, and the bottom of the shorts must be no more than 15 cm above the middle of the knee. For kids divisions, the shorts must cover at least halfway down the thigh.</p>
+        <p class="cite">Art. 8.1.16, effective 1 January 2027. This replaces the previous wording (“at least halfway down the thigh” / “no more than 15 cm from the knee”) for adult and master divisions. The halfway-down-the-thigh minimum now applies to kids divisions.</p>
+        <figure class="media-fig" style="max-width:820px;margin-top:1rem;">
+          <img src="assets/img/nogi/shorts-2027.svg" alt="2027 No-Gi shorts length: not past the knee; hem no more than 15 cm above mid-knee; kids must cover at least halfway down the thigh." data-zoom="assets/img/nogi/shorts-2027.svg" tabindex="0">
+          <figcaption class="caption">Updated 2027 measurement figure. Click to zoom. The previous public figure that read “no more than 15 cm from the knee” is no longer current and is not used here.</figcaption>
+        </figure>
+      </article>
+
+      <div class="grid-2">
+        <article class="card">
+          <h2>Shorts for men</h2>
+          <p class="rule">Board shorts colored black, white, black and white, and/or the color of the rank (belt) to which the athlete belongs, without pockets or with the pockets stitched completely shut, without buttons, exposed drawstrings, zippers or any form of plastic or metal that could present a risk to the opponent.</p>
+          <p class="rule" data-year="2027">Length: must not be longer than the knee, and the bottom of the shorts must be no more than 15 cm above the middle of the knee. For kids divisions, the shorts must cover at least halfway down the thigh.</p>
+          <p class="rule" data-year="2027"><span class="change-badge">2027</span> Also permitted are compression pants (skin-tight spats) and/or compression shorts made of elastic material (skin tight), worn beneath the shorts, in the colors black, white, black and white, and/or the color of the rank (belt) to which the athlete belongs.</p>
+        </article>
+        <article class="card">
+          <h2>Shorts, compression shorts and pants for women</h2>
+          <p class="rule">Shorts, compression pants (skin-tight spats) and/or compression shorts colored black, white, black and white, and/or the color of the rank (belt) to which the athlete belongs. The shorts must not have pockets or have the pockets stitched completely shut, must not have buttons, zippers or any kind of plastic or metal that could present a risk to the opponent.</p>
+          <p class="rule" data-year="2027">Length: must not be longer than the knee, and the bottom of the shorts must be no more than 15 cm above the middle of the knee. For kids divisions, the shorts must cover at least halfway down the thigh.</p>
+        </article>
+      </div>
+
+      <article class="card">
+        <h2>Fabric (Uniform Manual for Manufacturers)</h2>
+        <p class="rule">Rash guards and shorts are polyester and spandex.</p>
+        <p class="note">This fabric specification is from the Uniform Manual for Manufacturers. Manufacturers must match the official Pantone TCX color standard on polyester (see Belts &amp; Colors and the Manufacturers tab).</p>
+      </article>
+    </section>
+
+    <!-- BELTS & COLORS -->
+    <section class="panel" id="panel-colors" role="tabpanel" aria-labelledby="tab-colors">
+      <article class="card">
+        <h2>Official colors — Pantone TCX</h2>
+        <p class="rule">Official color references are Pantone Fashion, Home + Interiors Cotton (TCX), as published in the Uniform Manual for Manufacturers. On-screen swatches are approximate; the physical TCX standard is the reference.</p>
+        <p class="rule">Rash guards and shorts are polyester and spandex. Manufacturers must match the official Pantone TCX colour standard (Fashion, Home + Interiors, Cotton) on polyester, by lab dip / approval against the physical TCX standard. Navy Blue is not allowed. White remains PMS White (no official TCX colour is named simply “White”).</p>
+        <div class="swatches" style="margin-top:1rem;">
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#f4f4f4;border:1px solid #ddd;"></div>
+            <div class="meta"><p class="name">White</p><p class="code">PMS White</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#3e428c;"></div>
+            <div class="meta"><p class="name">Royal Blue</p><p class="code">19-3955 TCX</p></div>
+          </div>
+          <div class="swatch-card denied">
+            <div class="chip-block" style="background:#0a1f4d;"></div>
+            <div class="meta"><p class="name">Navy Blue</p><p class="code">Not allowed</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#232020;"></div>
+            <div class="meta"><p class="name">Black Onyx</p><p class="code">19-4003 TCX</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#7b7979;"></div>
+            <div class="meta"><p class="name">Silent Storm (Grey)</p><p class="code">17-1508 TCX</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#fabc09;"></div>
+            <div class="meta"><p class="name">Spectra Yellow</p><p class="code">14-0957 TCX</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#f25c19;"></div>
+            <div class="meta"><p class="name">Puffin’s Bill (Orange)</p><p class="code">16-1363 TCX</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#2a9949;"></div>
+            <div class="meta"><p class="name">Kelly Green</p><p class="code">16-6138 TCX</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#7f389f;"></div>
+            <div class="meta"><p class="name">Bright Violet</p><p class="code">19-3438 TCX</p></div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip-block" style="background:#775024;"></div>
+            <div class="meta"><p class="name">Monk’s Robe (Brown)</p><p class="code">18-1048 TCX</p></div>
+          </div>
+        </div>
+        <p class="cite">Same official TCX standard for Gi colors (white, royal blue, black) and for No-Gi rank colors, matched on polyester for rash guards and shorts.</p>
+      </article>
+
+      <article class="card" data-year="2027">
+        <h2><span class="change-badge">2027</span> No-Gi rash guard — rules by belt</h2>
+        <ul class="rules">
+          <li><strong>White belts:</strong> predominantly white (more than 50% of the surface); the only secondary color allowed is black.</li>
+          <li><strong>Colored belts (grey, yellow, orange, green, blue, purple and brown):</strong> black, white, or black and white, with at least 10% of the rank color, placed so the rank can be clearly identified from the front or the back. Shirts 100% the belt color are also permitted.</li>
+          <li><strong>Black belts:</strong> predominantly black (more than 50% of the surface); the only secondary color allowed is white. A small red area will be tolerated, but must not de-characterize the athlete’s rank color.</li>
+        </ul>
+        <p class="note">Use the belt selector on the <a href="#nogi">No-Gi</a> tab to see example photos for each rank.</p>
+      </article>
+    </section>
+
+    <!-- PATCHES -->
+    <section class="panel" id="panel-patches" role="tabpanel" aria-labelledby="tab-patches">
+      <article class="card">
+        <h2>Patches</h2>
+        <p class="rule">Patches may only be affixed in authorized regions of the GI, as depicted in the IBJJF Rules Book. They should be of cotton fabric and properly seamed. All patches unseamed or in unauthorized regions of the GI will be removed by the GI inspectors.</p>
+        <p class="rule">Painted GIs are forbidden, unless the paint is designed in the form of an academy or sponsor logo – and only on regions of the GI where patches are permitted. Even in cases where they are permitted, the athlete will be obliged to change GIs should the paint mark the GI of the opponent.</p>
+        <div class="grid-2" style="margin-top:1rem;">
+          <figure class="media-fig">
+            <img src="assets/img/site/gi-patches.jpg" alt="Official GI patch placement on a mannequin, front and back." data-zoom="assets/img/site/gi-patches.jpg" tabindex="0">
+            <figcaption class="caption">Official athlete-facing figure from the current IBJJF Uniform page. Click to zoom.</figcaption>
+          </figure>
+          <figure class="media-fig">
+            <img src="assets/img/pdf/patches-manual.png" alt="Manufacturer line-art of authorized patch areas, including brand-tag zone at the pants hem and 15 cm distance from the edge of the pants." data-zoom="assets/img/pdf/patches-manual.png" tabindex="0">
+            <figcaption class="caption">Line art from the Uniform Manual for Manufacturers, including the brand-tag area and the 15 cm distance from the edge of the pants. Click to zoom.</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- MANUFACTURERS -->
+    <section class="panel" id="panel-makers" role="tabpanel" aria-labelledby="tab-makers">
+      <article class="card">
+        <h2>Uniform Manual for Manufacturers</h2>
+        <p class="rule">The manual sets construction details, labeling, patch areas, and the official color standard for approved uniforms.</p>
+        <p class="rule">Rash guards and shorts are polyester and spandex. Manufacturers must match the official Pantone TCX colour standard (Fashion, Home + Interiors, Cotton) on polyester, by lab dip / approval against the physical TCX standard. Navy Blue is not allowed. Swatches are approximate; the physical TCX standard is the reference. White remains PMS White (no official TCX colour is named simply “White”).</p>
+        <p class="note">Athlete-facing inspection measurements on the Gi tab follow the IBJJF Rules Book and the public Uniform page (lapel thickness 1.3 cm, collar width 5 cm, sleeve opening 7 cm). Construction diagrams below are from the manufacturer manual.</p>
+        <p style="margin:1rem 0 0;">
+          <a class="btn btn-gold" href="assets/pdf/IBJJF-manual-uniforme-EN-08-final.pdf">Download Uniform Manual (EN-08)</a>
+        </p>
+      </article>
+
+      <div class="grid-2">
+        <figure class="card media-fig">
+          <img src="assets/img/pdf/gi-measures-manual.png" alt="Manufacturer GI measurement figures, side and front." data-zoom="assets/img/pdf/gi-measures-manual.png" tabindex="0">
+          <figcaption class="caption">Measurement figures from the manufacturer manual. Click to zoom.</figcaption>
+        </figure>
+        <figure class="card media-fig">
+          <img src="assets/img/pdf/reinforcement.png" alt="GI reinforcement construction diagram from the manufacturer manual." data-zoom="assets/img/pdf/reinforcement.png" tabindex="0">
+          <figcaption class="caption">Reinforcement. Click to zoom.</figcaption>
+        </figure>
+        <figure class="card media-fig">
+          <img src="assets/img/pdf/pants-construction.png" alt="GI pants construction diagram from the manufacturer manual." data-zoom="assets/img/pdf/pants-construction.png" tabindex="0">
+          <figcaption class="caption">Pants construction. Click to zoom.</figcaption>
+        </figure>
+        <figure class="card media-fig">
+          <img src="assets/img/pdf/label-jacket.png" alt="Required jacket label placement from the manufacturer manual." data-zoom="assets/img/pdf/label-jacket.png" tabindex="0">
+          <figcaption class="caption">Jacket label. Click to zoom.</figcaption>
+        </figure>
+        <figure class="card media-fig">
+          <img src="assets/img/pdf/label-pants.png" alt="Required pants label placement from the manufacturer manual." data-zoom="assets/img/pdf/label-pants.png" tabindex="0">
+          <figcaption class="caption">Pants label. Click to zoom.</figcaption>
+        </figure>
+        <figure class="card media-fig">
+          <img src="assets/img/pdf/belt-manual.png" alt="Belt knot, tip and manufacturer label diagram." data-zoom="assets/img/pdf/belt-manual.png" tabindex="0">
+          <figcaption class="caption">Belt tip and label. Click to zoom.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>These requirements are effective 1 January 2027. This page is a self-contained prototype and is not the live IBJJF website.</p>
+      <div class="downloads">
+        <a class="btn btn-gold" href="assets/pdf/IBJJF-manual-uniforme-EN-08-final.pdf">Download Uniform Manual (EN-08)</a>
+        <a class="btn btn-ghost" href="https://ibjjf.com/books-videos">IBJJF Rules Book</a>
+        <a class="btn btn-ghost" href="https://ibjjf.com/uniform">Current live Uniform page</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Zoomed image">
+    <button type="button" class="close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <!-- Reviewer-only notes are in REVIEWER-NOTES.md (not linked on the page). -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
