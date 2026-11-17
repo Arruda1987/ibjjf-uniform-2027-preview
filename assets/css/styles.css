@@ -1,5 +1,4 @@
-/* IBJJF Uniform page prototype — tokens from the IBJJF design system
-   (audited from ibjjf.com + Mudanças 2027 EN pattern). */
+/* IBJJF Uniform page — tokens from the IBJJF design system (ibjjf.com). */
 :root {
   --ibjjf-primary: #004581;
   --ibjjf-secondary: #1c88e6;
@@ -13,8 +12,6 @@
   --ibjjf-inactive: #bebebe;
   --ibjjf-bg: #f4f6f8;
   --ibjjf-card: #ffffff;
-  --ibjjf-changed: #fff6e0;
-  --ibjjf-changed-border: #faab19;
   --container: 1070px;
   --header-h: 72px;
   --radius: 6px;
@@ -44,7 +41,7 @@ a:hover { text-decoration: underline; }
 }
 .skip:focus { left: 8px; top: 8px; }
 
-/* Header — Mudanças 2027 pattern: sticky navy, 4px gold bottom */
+/* Header: sticky navy, 4px gold bottom */
 .site-header {
   position: sticky; top: 0; z-index: 50;
   background: var(--ibjjf-darkest);
@@ -84,24 +81,6 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
 }
 
-.toggle {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: transparent; border: 0; color: #fff; cursor: pointer;
-  font-family: var(--font-display); font-weight: 700; font-size: .85rem;
-  letter-spacing: .03em; text-transform: uppercase;
-}
-.toggle .switch {
-  width: 42px; height: 22px; border-radius: 999px;
-  background: #3a4e6e; position: relative; flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,.25);
-}
-.toggle .switch::after {
-  content: ""; position: absolute; top: 2px; left: 2px;
-  width: 16px; height: 16px; border-radius: 50%;
-  background: #fff; transition: transform .2s ease;
-}
-body.highlight-2027 .toggle .switch { background: var(--ibjjf-accent); border-color: var(--ibjjf-accent); }
-body.highlight-2027 .toggle .switch::after { transform: translateX(20px); background: var(--ibjjf-darkest); }
 
 .wrap { max-width: var(--container); margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
 
@@ -177,29 +156,6 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 }
 .cite { font-size: .82rem; color: var(--ibjjf-muted); margin: .6rem 0 0; }
 
-/* 2027 highlight */
-[data-year="2027"] { transition: background .2s ease, box-shadow .2s ease; border-radius: 3px; }
-body.highlight-2027 [data-year="2027"] {
-  background: var(--ibjjf-changed);
-  box-shadow: inset 3px 0 0 var(--ibjjf-changed-border);
-  padding-left: .55rem;
-}
-body.highlight-2027 .card[data-year="2027"],
-body.highlight-2027 .swatch-card[data-year="2027"] {
-  outline: 2px solid var(--ibjjf-accent);
-  background: var(--ibjjf-changed);
-  padding-left: 1.4rem;
-}
-.change-badge {
-  display: none;
-  font-family: var(--font-display);
-  font-weight: 700; font-size: .7rem; letter-spacing: .06em;
-  text-transform: uppercase;
-  background: var(--ibjjf-accent); color: var(--ibjjf-darkest);
-  border-radius: 3px; padding: .1rem .4rem; margin-right: .4rem;
-  vertical-align: middle;
-}
-body.highlight-2027 .change-badge { display: inline-block; }
 
 /* Layout helpers */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; }
@@ -229,7 +185,7 @@ body.highlight-2027 .change-badge { display: inline-block; }
 .belt-btn.yellow { background: #fabc09; color: #222; }
 .belt-btn.orange { background: #f25c19; color: #fff; }
 .belt-btn.green { background: #2a9949; color: #fff; }
-.belt-btn.blue { background: #3e428c; color: #fff; }
+.belt-btn.blue { background: #2056AE; color: #fff; }
 .belt-btn.purple { background: #7f389f; color: #fff; }
 .belt-btn.brown { background: #775024; color: #fff; }
 .belt-btn.black { background: #232020; color: #fff; }
@@ -364,4 +320,16 @@ body.highlight-2027 .change-badge { display: inline-block; }
   .logo img { height: 36px; }
   .header-inner { gap: .65rem; padding: .55rem 1rem; }
   .tabs { padding-bottom: 0; }
+}
+
+.gi-color-stage { background:#fff; border:1px solid var(--ibjjf-gray); border-radius:var(--radius); overflow:hidden; }
+.gi-color-stage img { width:100%; cursor:zoom-in; display:block; }
+.patch-legend { margin:.85rem 0 0; background:#f8fafc; border:1px solid var(--ibjjf-gray); border-radius:var(--radius); padding:.85rem 1rem 1rem; }
+.patch-legend h3 { margin-top:0; }
+.legend-row { display:flex; flex-wrap:wrap; gap:.7rem 1.2rem; margin:0 0 .7rem; }
+.legend-item { display:flex; align-items:flex-start; gap:.5rem; font-size:.92rem; max-width:24rem; }
+.legend-item .sw { width:22px; height:22px; border-radius:3px; border:1px solid rgba(0,0,0,.15); flex-shrink:0; margin-top:.15rem; }
+.shorts-row { display:grid; grid-template-columns: 1.15fr .85fr; gap:1.15rem; align-items:start; }
+@media (max-width: 768px) {
+  .shorts-row { grid-template-columns: 1fr; }
 }

@@ -67,7 +67,7 @@
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
         { name: "Black and white", hex: "linear-gradient(90deg,#232020 50%,#f4f4f4 50%)" },
-        { name: "Royal Blue (at least 10%, or 100%)", hex: "#3e428c" }
+        { name: "Royal Blue (at least 10%, or 100%)", hex: "#2056AE" }
       ],
       rule:
         "For colored belts (grey, yellow, orange, green, blue, purple and brown): shirts are colored black, white, or black and white, with at least 10% of the rank color (belt) to which the athlete belongs. The rank color must be placed so that the athlete’s rank (belt) can be clearly identified whether the athlete is seen from the front or from the back. Shirts 100% the color of the athlete’s rank (belt) are also permitted."
@@ -170,14 +170,6 @@
     if (document.getElementById("panel-" + id)) showTab(id, false);
   });
 
-  /* 2027 highlight */
-  var toggle = document.getElementById("toggle-2027");
-  if (toggle) {
-    toggle.addEventListener("click", function () {
-      var on = document.body.classList.toggle("highlight-2027");
-      toggle.setAttribute("aria-pressed", on ? "true" : "false");
-    });
-  }
 
   /* Belt selector */
   var beltBtns = Array.prototype.slice.call(document.querySelectorAll("[data-belt]"));
@@ -217,11 +209,15 @@
   });
   renderBelt("blue");
 
-  /* Gi color explorer */
-  var giFill = document.getElementById("gi-fill");
-  var giPants = document.getElementById("gi-pants");
+  /* Gi color explorer — official patch-area drawing, fabric only */
+  var giImg = document.getElementById("gi-color-img");
   var giLabel = document.getElementById("gi-color-label");
   var giNote = document.getElementById("gi-color-note");
+  var GI_ART = {
+    white: "assets/img/site/gi-patches-white.png",
+    royal: "assets/img/site/gi-patches-royal.png",
+    black: "assets/img/site/gi-patches-black.png"
+  };
   document.querySelectorAll("[data-gi-color]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       document.querySelectorAll("[data-gi-color]").forEach(function (b) {
@@ -229,18 +225,18 @@
       });
       btn.setAttribute("aria-pressed", "true");
       var allowed = btn.getAttribute("data-allowed") !== "false";
-      var color = btn.getAttribute("data-gi-color");
+      var key = btn.getAttribute("data-art");
       var name = btn.getAttribute("data-name");
-      document.querySelectorAll(".gi-body").forEach(function (el) {
-        el.setAttribute("fill", color);
-      });
-      if (giFill) giFill.setAttribute("fill", color);
-      if (giPants) giPants.setAttribute("fill", color);
+      if (giImg && allowed && GI_ART[key]) {
+        giImg.src = GI_ART[key];
+        giImg.setAttribute("data-zoom", GI_ART[key]);
+        giImg.alt = "Official GI patch-area drawing in " + name + ". Teal areas are authorized for patches; green is the area allowed for a brand tag.";
+      }
       if (giLabel) giLabel.textContent = name;
       if (giNote) {
         giNote.textContent = allowed
           ? btn.getAttribute("data-note")
-          : "Navy blue is not allowed. Official blue is Pantone 19-3955 TCX Royal Blue.";
+          : "Navy blue is not allowed. Official blue is Royal Blue — PMS 2172 C.";
       }
       var preview = document.getElementById("gi-preview");
       if (preview) preview.classList.toggle("denied", !allowed);
