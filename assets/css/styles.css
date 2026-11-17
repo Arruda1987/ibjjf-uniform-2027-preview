@@ -395,3 +395,17 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 @media (max-width: 380px) {
   .belt-row:not(.color-buttons) .belt-btn { font-size: .75rem; letter-spacing: 0; gap: .35rem; padding-left: 8px; }
 }
+
+/* No-Gi / official colors: 10 cards = 2 even rows of 5 on desktop, even 2-column grid on mobile */
+.swatches { grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: stretch; }
+.swatch-card { display: flex; flex-direction: column; min-width: 0; }
+.swatch-card .meta { padding: .55rem .6rem 0; min-width: 0; }
+.swatch-card .name { font-size: .84rem; line-height: 1.2; letter-spacing: 0; overflow-wrap: anywhere; }
+.swatch-card .code { font-size: .74rem; line-height: 1.3; overflow-wrap: anywhere; }
+.swatch-card.denied .chip-block::after { font-size: .62rem; letter-spacing: .04em; white-space: nowrap; }
+@media (max-width: 768px) {
+  .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .swatch-card .name { font-size: .88rem; }
+  .swatch-card .code { font-size: .78rem; }
+  .swatch-card.denied .chip-block::after { font-size: .7rem; letter-spacing: .06em; }
+}
