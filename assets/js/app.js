@@ -187,6 +187,7 @@
     if (titleEl) titleEl.textContent = b.label + " — No-Gi rash guard";
     if (photo) {
       photo.src = b.img;
+      photo.setAttribute("data-zoom", b.img);
       photo.alt = "Example No-Gi rash guard colors for a " + b.label.toLowerCase();
     }
     if (ruleEl) ruleEl.textContent = b.rule;
@@ -279,7 +280,7 @@
   }
   document.querySelectorAll("[data-zoom]").forEach(function (el) {
     el.addEventListener("click", function () {
-      var src = el.getAttribute("data-zoom") || el.getAttribute("src");
+      var src = (el.tagName === "IMG" && el.getAttribute("src")) || el.getAttribute("data-zoom") || el.getAttribute("src");
       var alt = el.getAttribute("alt") || "";
       if (src) openLb(src, alt);
     });
