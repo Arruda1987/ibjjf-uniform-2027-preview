@@ -423,7 +423,7 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 .measure-explorer > h2 { grid-area: 1 / 2; }
 .measure-explorer > .caption { grid-area: 2 / 2; margin: 0 0 .65rem; }
 .color-explorer > .gi-preview {
-  grid-area: 3 / 1; display: flex; flex-direction: column; justify-content: center;
+  grid-area: 3 / 1; display: flex; flex-direction: column; justify-content: flex-start;
 }
 .color-explorer > .gi-preview svg, .color-explorer > .gi-preview .gi-color-stage { flex: 0 0 auto; }
 .measure-explorer > .measure-map { grid-area: 3 / 2; align-self: start; }
