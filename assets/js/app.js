@@ -217,7 +217,8 @@
   var GI_ART = {
     white: "assets/img/site/gi-patches-white.png",
     royal: "assets/img/site/gi-patches-royal.png",
-    black: "assets/img/site/gi-patches-black.png"
+    black: "assets/img/site/gi-patches-black.png",
+    navy: "assets/img/site/gi-patches-navy.png"
   };
   document.querySelectorAll("[data-gi-color]").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -228,7 +229,7 @@
       var allowed = btn.getAttribute("data-allowed") !== "false";
       var key = btn.getAttribute("data-art");
       var name = btn.getAttribute("data-name");
-      if (giImg && allowed && GI_ART[key]) {
+      if (giImg && GI_ART[key]) {
         giImg.src = GI_ART[key];
         giImg.setAttribute("data-zoom", GI_ART[key]);
         giImg.alt = "GI drawing in " + name + ".";
