@@ -236,12 +236,14 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 .measure-map { position: relative; }
 .measure-map img { width: 100%; cursor: zoom-in; }
 .hotspot {
-  position: absolute; width: 22px; height: 22px; border-radius: 50%;
+  position: absolute; width: 16px; height: 16px; border-radius: 50%;
   background: var(--ibjjf-accent); color: var(--ibjjf-darkest);
   border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(0,69,129,.35);
-  font-family: var(--font-display); font-weight: 700; font-size: .72rem;
+  font-family: var(--font-display); font-weight: 700; font-size: .55rem;
+  line-height: 1;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; padding: 0; box-sizing: border-box; transform: translate(calc(-100% - 6px), -50%);
+  cursor: pointer; padding: 0; box-sizing: border-box;
+  transform: translate(calc(-100% - 4px), -50%);
 }
 .hotspot:hover, .hotspot[aria-pressed="true"] { background: var(--ibjjf-primary); color: #fff; }
 .measure-detail {
@@ -335,5 +337,15 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 }
 
 @media (max-width: 576px) {
-  .hotspot { width: 20px; height: 20px; font-size: .68rem; }
+  .hotspot { width: 14px; height: 14px; font-size: .5rem; }
+  /* Invisible 44px tap target, extending left/up/down so it never covers the label text. */
+  .hotspot::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    transform: translateY(-50%);
+  }
 }
