@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 393" width="2048" height="786">
+<defs><linearGradient id="bgg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2e3e5"/><stop offset="1" stop-color="#f7f7f7"/></linearGradient>
+<linearGradient id="leg" x1="0" x2="1"><stop offset="0" stop-color="#9c9c9c"/><stop offset=".5" stop-color="#b4b4b4"/><stop offset="1" stop-color="#a2a2a2"/></linearGradient>
+<linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#6c6c6e"/><stop offset=".55" stop-color="#7b7b7d"/><stop offset="1" stop-color="#666668"/></linearGradient></defs>
+<rect width="1024" height="393" fill="url(#bgg)"/>
+<!-- LEFT side view -->
+<path d="M52,250 C46,300 34,340 24,393 L92,393 C96,350 104,320 108,295 C114,280 112,262 110,250 Z" fill="url(#leg)" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M98,300 C104,292 110,288 114,280" fill="none" stroke="#7a7a7a" stroke-width="1.2"/>
+<path d="M26,0 L150,0 L150,62 C120,66 60,66 26,62 Z" fill="#f4f4f4" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M25,72 C60,66 120,64 148,70 L145,265 L30,265 C26,200 23,130 25,72 Z" fill="url(#sh)" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M26,62 C60,66 120,66 150,62 L148,72 C120,66 60,67 25,74 Z" fill="#e9e9e9" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M45,90 C40,150 40,200 48,262 M112,110 C120,150 126,200 130,262" fill="none" stroke="#5c5c5e" stroke-width="1.1" opacity=".7"/>
+<!-- RIGHT front view -->
+<path d="M786,250 C784,300 778,350 782,393 L834,393 C832,350 838,300 840,262 Z" fill="url(#leg)" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M880,262 C882,300 888,350 886,393 L936,393 C940,350 936,300 932,250 Z" fill="url(#leg)" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M812,320 C818,330 826,330 832,322 M884,322 C890,330 900,330 906,320" fill="none" stroke="#7a7a7a" stroke-width="1.2"/>
+<path d="M792,0 L930,0 L940,64 C900,70 820,70 780,64 Z" fill="#f4f4f4" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M778,80 C820,74 900,74 942,80 L966,265 L878,265 L868,135 L856,135 L848,265 L768,265 Z" fill="url(#sh)" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M780,64 C820,70 900,70 940,64 L942,82 C900,74 820,74 778,82 Z" fill="#e9e9e9" stroke="#3a3a3a" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M862,85 L862,135" stroke="#4e4e50" stroke-width="1.3"/>
+<!-- guides -->
+<g stroke="#333" stroke-width="1.4"><line x1="135" y1="205" x2="312" y2="205"/><line x1="130" y1="265" x2="312" y2="265"/>
+<line x1="565" y1="205" x2="762" y2="205"/><line x1="565" y1="265" x2="768" y2="265"/></g>
+<path d="M115,297 L318,297 L318,272" fill="none" stroke="#333" stroke-width="1.3" stroke-dasharray="3 3"/>
+<line x1="316" y1="160" x2="316" y2="203" stroke="#333" stroke-width="1.3" stroke-dasharray="3 3"/><path d="M312.5,199 L316,205 L319.5,199 Z" fill="#333"/><line x1="316" y1="207" x2="316" y2="263" stroke="#333" stroke-width="1.3" /><path d="M312.5,213 L316,207 L319.5,213 Z" fill="#333"/><path d="M312.5,257 L316,263 L319.5,257 Z" fill="#333"/><line x1="316" y1="267" x2="316" y2="297" stroke="#333" stroke-width="1.3" stroke-dasharray="3 3"/><path d="M312.5,271 L316,265 L319.5,271 Z" fill="#333"/><line x1="580" y1="160" x2="580" y2="203" stroke="#333" stroke-width="1.3" stroke-dasharray="3 3"/><path d="M576.5,199 L580,205 L583.5,199 Z" fill="#333"/><line x1="580" y1="207" x2="580" y2="263" stroke="#333" stroke-width="1.3" /><path d="M576.5,213 L580,207 L583.5,213 Z" fill="#333"/><path d="M576.5,257 L580,263 L583.5,257 Z" fill="#333"/><line x1="580" y1="267" x2="580" y2="297" stroke="#333" stroke-width="1.3" stroke-dasharray="3 3"/><path d="M576.5,271 L580,265 L583.5,271 Z" fill="#333"/>
+<g font-family="Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#222">
+<text x="378" y="220">at least halfway down</text><text x="378" y="238">the thigh no more than</text><text x="378" y="256">15 cm from the knee</text></g>
+</svg>
