@@ -221,9 +221,11 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 .swatch-card.denied .chip-block { position: relative; }
 .swatch-card.denied .chip-block::after {
   content: "NOT ALLOWED";
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  position: absolute; left: 0; right: 0; bottom: 0; top: auto;
+  display: flex; align-items: center; justify-content: center;
+  padding: .22rem .3rem;
   font-family: var(--font-display); font-weight: 700; letter-spacing: .08em;
-  color: #fff; background: rgba(120, 16, 16, .55); font-size: .8rem;
+  color: #fff; background: rgba(120, 16, 16, .92); font-size: .72rem;
 }
 
 /* Gi explorer: narrow color card (~270px) + wide measurement column, headings aligned */
@@ -365,4 +367,28 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
     height: 44px;
     transform: translateY(-50%);
   }
+}
+
+.belt-spec { margin: 0 0 1.15rem; }
+.belt-spec-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, .85fr);
+  gap: 1.15rem;
+  align-items: center;
+}
+.belt-legend { margin: 0; }
+.belt-legend h3 { margin: 0 0 .55rem; }
+.belt-legend .ab {
+  margin: 0 0 .55rem;
+  padding-left: 0;
+  list-style: none;
+}
+.belt-legend .ab li { margin: 0 0 .5rem; }
+.belt-legend .ab strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ibjjf-darkest);
+}
+@media (max-width: 768px) {
+  .belt-spec-row { grid-template-columns: 1fr; }
 }
