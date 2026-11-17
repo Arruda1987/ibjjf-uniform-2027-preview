@@ -162,17 +162,22 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 
 /* Belt selector */
 .belt-row {
-  display: flex; flex-wrap: wrap; gap: .45rem; margin: 0 0 1rem;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; margin: 0 0 1rem;
+}
+.color-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1040px) {
+  .belt-row:not(.color-buttons) { grid-template-columns: repeat(9, minmax(0, 1fr)); }
 }
 .belt-btn {
   --sw: transparent;
   appearance: none; cursor: pointer;
-  display: inline-flex; align-items: center; gap: .6rem; text-align: center; vertical-align: middle;
+  display: flex; align-items: center; justify-content: flex-start; gap: .5rem; text-align: left;
+  width: 100%; min-width: 0; white-space: nowrap; overflow: hidden;
   background: transparent; color: var(--ibjjf-primary);
   border: 2px solid var(--ibjjf-primary); border-radius: 4px;
-  padding: 9px 24px;
-  font-family: var(--font-display); font-weight: 700; font-size: .875rem; line-height: 1.5;
-  letter-spacing: 1px; text-transform: uppercase;
+  padding: 9px 0 9px 12px;
+  font-family: var(--font-display); font-weight: 700; font-size: .8125rem; line-height: 1.5;
+  letter-spacing: .5px; text-transform: uppercase;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .belt-btn::before {
@@ -317,7 +322,7 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
   .header-actions { width: 100%; margin-left: 0; }
   .page-title { font-size: 22px; }
   .tab { padding: 9px 20px; }
-  .belt-btn { padding: 9px 16px; }
+  .belt-btn { padding: 9px 0 9px 10px; gap: .4rem; }
 }
 @media (max-width: 576px) {
   .swatches { grid-template-columns: 1fr 1fr; }
@@ -383,4 +388,10 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 @media (max-width: 768px) {
   .header-inner { flex-wrap: nowrap; }
   .header-actions { width: auto; margin-left: auto; }
+}
+
+/* Gi color buttons: equal 2x2 grid; long labels wrap instead of being cut */
+.color-buttons .belt-btn { white-space: normal; line-height: 1.25; }
+@media (max-width: 380px) {
+  .belt-row:not(.color-buttons) .belt-btn { font-size: .75rem; letter-spacing: 0; gap: .35rem; padding-left: 8px; }
 }
