@@ -226,13 +226,30 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
   color: #fff; background: rgba(120, 16, 16, .55); font-size: .8rem;
 }
 
-/* Gi explorer */
-.gi-explorer { display: grid; grid-template-columns: 280px 1fr; gap: 1.15rem; align-items: start; }
+/* Gi explorer: narrow color card (~270px) + wide measurement column, headings aligned */
+.gi-explorer {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  background: var(--ibjjf-card);
+  border: 1px solid var(--ibjjf-gray);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.4rem 1.4rem;
+  margin: 0 0 1.15rem;
+}
+.gi-explorer > div > h2 { margin: 0 0 .65rem; }
+.measure-explorer > .caption { margin: 0 0 .7rem; }
 .gi-preview {
   background: #fff; border: 1px solid var(--ibjjf-gray); border-radius: var(--radius);
-  padding: 1rem; text-align: center;
+  padding: .85rem .75rem 1rem; text-align: center;
 }
 .gi-preview svg { width: 100%; max-width: 220px; margin: 0 auto; height: auto; }
+.gi-preview .gi-color-stage { border: 0; border-radius: 0; background: transparent; overflow: visible; }
+.gi-preview .gi-color-stage img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+.gi-explorer .color-buttons { margin-top: .8rem; }
+.gi-explorer .belt-btn.blue { background: #2056AE; color: #fff; }
 .measure-map { position: relative; }
 .measure-map img { width: 100%; cursor: zoom-in; }
 .hotspot {
@@ -324,7 +341,7 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
   .tabs { padding-bottom: 0; }
 }
 
-.gi-color-stage { background:#fff; border:1px solid var(--ibjjf-gray); border-radius:var(--radius); overflow:hidden; }
+.gi-color-stage { background:#fff; overflow:hidden; }
 .gi-color-stage img { width:100%; cursor:zoom-in; display:block; }
 .patch-legend { margin:.85rem 0 0; background:#f8fafc; border:1px solid var(--ibjjf-gray); border-radius:var(--radius); padding:.85rem 1rem 1rem; }
 .patch-legend h3 { margin-top:0; }
