@@ -4,7 +4,7 @@
   var BELTS = {
     white: {
       label: "Faixa branca",
-      img: "../pt/assets/img/nogi/pt_white.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_white.jpg?v=20261117-1513",
       colors: [
         { name: "Branco (mais de 50%)", hex: "#f4f4f4", border: "#ccc" },
         { name: "Preto (apenas secundária)", hex: "#232020" }
@@ -14,7 +14,7 @@
     },
     grey: {
       label: "Faixa cinza",
-      img: "../pt/assets/img/nogi/pt_grey.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_grey.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -26,7 +26,7 @@
     },
     yellow: {
       label: "Faixa amarela",
-      img: "../pt/assets/img/nogi/pt_yellow.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_yellow.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -38,7 +38,7 @@
     },
     orange: {
       label: "Faixa laranja",
-      img: "../pt/assets/img/nogi/pt_orange.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_orange.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -50,7 +50,7 @@
     },
     green: {
       label: "Faixa verde",
-      img: "../pt/assets/img/nogi/pt_green.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_green.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -62,7 +62,7 @@
     },
     blue: {
       label: "Faixa azul",
-      img: "../pt/assets/img/nogi/pt_blue.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_blue.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -74,7 +74,7 @@
     },
     purple: {
       label: "Faixa roxa",
-      img: "../pt/assets/img/nogi/pt_purple.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_purple.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -86,7 +86,7 @@
     },
     brown: {
       label: "Faixa marrom",
-      img: "../pt/assets/img/nogi/pt_brown.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_brown.jpg?v=20261117-1513",
       colors: [
         { name: "Preto", hex: "#232020" },
         { name: "Branco", hex: "#f4f4f4", border: "#ccc" },
@@ -98,7 +98,7 @@
     },
     black: {
       label: "Faixa preta",
-      img: "../pt/assets/img/nogi/pt_black.jpg?v=20261117-1511",
+      img: "../pt/assets/img/nogi/pt_black.jpg?v=20261117-1513",
       colors: [
         { name: "Preto (mais de 50%)", hex: "#232020" },
         { name: "Branco (apenas secundária)", hex: "#f4f4f4", border: "#ccc" },
@@ -132,7 +132,7 @@
     },
     belt: {
       title: "Faixa",
-      text: "O atleta deve utilizar uma faixa resistente de 4 a 5 cm de largura, cuja cor corresponda à graduação, com a ponta preta, exceto faixas pretas, que terão a ponta branca ou vermelha. Essa deve ser usada sobre o paletó, dando duas voltas na altura da cintura e sendo amarrada com um nó duplo, suficientemente apertada para impedir que o paletó se solte. Após o nó duplo, cada ponta da faixa deve ter entre 20 cm e 30 cm de comprimento."
+      text: "O atleta deve utilizar uma faixa resistente de 4 a 5 cm de largura, cuja cor corresponda à graduação, com a ponta preta, exceto faixas pretas, que terão a ponta branca ou vermelha. Após o nó duplo, cada ponta da faixa deve ter entre 20 cm e 30 cm de comprimento."
     }
   };
 
@@ -214,10 +214,10 @@
   var giLabel = document.getElementById("gi-color-label");
   var giNote = document.getElementById("gi-color-note");
   var GI_ART = {
-    white: "../pt/assets/img/site/gi-patches-white.png?v=20261117-1511",
-    royal: "../pt/assets/img/site/gi-patches-royal.png?v=20261117-1511",
-    black: "../pt/assets/img/site/gi-patches-black.png?v=20261117-1511",
-    navy: "../pt/assets/img/site/gi-patches-navy.png?v=20261117-1511"
+    white: "../pt/assets/img/site/gi-patches-white.png?v=20261117-1513",
+    royal: "../pt/assets/img/site/gi-patches-royal.png?v=20261117-1513",
+    black: "../pt/assets/img/site/gi-patches-black.png?v=20261117-1513",
+    navy: "../pt/assets/img/site/gi-patches-navy.png?v=20261117-1513"
   };
   document.querySelectorAll("[data-gi-color]").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -260,6 +260,29 @@
       }
     });
   });
+
+
+  /* Keep the measurement detail box a constant size: min-height = tallest of all texts at the current width */
+  function fitMeasureDetail() {
+    var box = document.getElementById("measure-detail");
+    if (!box || !detailTitle || !detailText || !box.offsetParent) return;
+    var t0 = detailTitle.textContent, x0 = detailText.textContent;
+    box.style.minHeight = "";
+    var max = box.offsetHeight;
+    Object.keys(MEASURES).forEach(function (k) {
+      detailTitle.textContent = MEASURES[k].title;
+      detailText.textContent = MEASURES[k].text;
+      if (box.offsetHeight > max) max = box.offsetHeight;
+    });
+    detailTitle.textContent = t0;
+    detailText.textContent = x0;
+    box.style.minHeight = max + "px";
+  }
+  fitMeasureDetail();
+  window.addEventListener("resize", fitMeasureDetail);
+  window.addEventListener("load", fitMeasureDetail);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMeasureDetail);
+  tabs.forEach(function (t) { t.addEventListener("click", function () { setTimeout(fitMeasureDetail, 0); }); });
 
   /* Lightbox */
   var lb = document.getElementById("lightbox");

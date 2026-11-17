@@ -4,7 +4,7 @@
   var BELTS = {
     white: {
       label: "White belt",
-      img: "assets/img/nogi/en_white.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_white.jpg?v=20261117-1513",
       colors: [
         { name: "White (more than 50%)", hex: "#f4f4f4", border: "#ccc" },
         { name: "Black (secondary only)", hex: "#232020" }
@@ -14,7 +14,7 @@
     },
     grey: {
       label: "Grey belt",
-      img: "assets/img/nogi/en_grey.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_grey.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -26,7 +26,7 @@
     },
     yellow: {
       label: "Yellow belt",
-      img: "assets/img/nogi/en_yellow.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_yellow.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -38,7 +38,7 @@
     },
     orange: {
       label: "Orange belt",
-      img: "assets/img/nogi/en_orange.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_orange.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -50,7 +50,7 @@
     },
     green: {
       label: "Green belt",
-      img: "assets/img/nogi/en_green.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_green.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -62,7 +62,7 @@
     },
     blue: {
       label: "Blue belt",
-      img: "assets/img/nogi/en_blue.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_blue.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -74,7 +74,7 @@
     },
     purple: {
       label: "Purple belt",
-      img: "assets/img/nogi/en_purple.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_purple.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -86,7 +86,7 @@
     },
     brown: {
       label: "Brown belt",
-      img: "assets/img/nogi/en_brown.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_brown.jpg?v=20261117-1513",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -98,7 +98,7 @@
     },
     black: {
       label: "Black belt",
-      img: "assets/img/nogi/en_black.jpg?v=20261117-1511",
+      img: "assets/img/nogi/en_black.jpg?v=20261117-1513",
       colors: [
         { name: "Black (more than 50%)", hex: "#232020" },
         { name: "White (secondary only)", hex: "#f4f4f4", border: "#ccc" },
@@ -132,7 +132,7 @@
     },
     belt: {
       title: "Belt",
-      text: "Athletes should use a durable, 4 to 5 cm wide belt colored according to the athlete’s rank, with a black tip – except for black belts, where the tip should be white or red. The belt should be worn over the top, wrap around the waist twice, and be tied using a double knot tight enough to hold the GI top closed. Once tied in a double knot, each end of the belt should hang 20 to 30 cm in length."
+      text: "Athletes should use a durable, 4 to 5 cm wide belt colored according to the athlete’s rank, with a black tip – except for black belts, where the tip should be white or red. Once tied in a double knot, each end of the belt should hang 20 to 30 cm in length."
     }
   };
 
@@ -215,10 +215,10 @@
   var giLabel = document.getElementById("gi-color-label");
   var giNote = document.getElementById("gi-color-note");
   var GI_ART = {
-    white: "assets/img/site/gi-patches-white.png?v=20261117-1511",
-    royal: "assets/img/site/gi-patches-royal.png?v=20261117-1511",
-    black: "assets/img/site/gi-patches-black.png?v=20261117-1511",
-    navy: "assets/img/site/gi-patches-navy.png?v=20261117-1511"
+    white: "assets/img/site/gi-patches-white.png?v=20261117-1513",
+    royal: "assets/img/site/gi-patches-royal.png?v=20261117-1513",
+    black: "assets/img/site/gi-patches-black.png?v=20261117-1513",
+    navy: "assets/img/site/gi-patches-navy.png?v=20261117-1513"
   };
   document.querySelectorAll("[data-gi-color]").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -261,6 +261,29 @@
       }
     });
   });
+
+
+  /* Keep the measurement detail box a constant size: min-height = tallest of all texts at the current width */
+  function fitMeasureDetail() {
+    var box = document.getElementById("measure-detail");
+    if (!box || !detailTitle || !detailText || !box.offsetParent) return;
+    var t0 = detailTitle.textContent, x0 = detailText.textContent;
+    box.style.minHeight = "";
+    var max = box.offsetHeight;
+    Object.keys(MEASURES).forEach(function (k) {
+      detailTitle.textContent = MEASURES[k].title;
+      detailText.textContent = MEASURES[k].text;
+      if (box.offsetHeight > max) max = box.offsetHeight;
+    });
+    detailTitle.textContent = t0;
+    detailText.textContent = x0;
+    box.style.minHeight = max + "px";
+  }
+  fitMeasureDetail();
+  window.addEventListener("resize", fitMeasureDetail);
+  window.addEventListener("load", fitMeasureDetail);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitMeasureDetail);
+  tabs.forEach(function (t) { t.addEventListener("click", function () { setTimeout(fitMeasureDetail, 0); }); });
 
   /* Lightbox */
   var lb = document.getElementById("lightbox");
