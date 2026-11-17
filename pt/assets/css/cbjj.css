@@ -54,11 +54,7 @@ a { color: var(--ibjjf-secondary); }
 .lead { font-size: 1.05rem; }
 .banner-proto { background: #fff8e0; border-color: #f2d98a; color: #5a4a16; }
 
-.tabs { border-bottom: 1px solid var(--ibjjf-gray); }
-.tab { color: #5d6461; font-weight: 700; }
-.tab:hover { color: #154e3c; }
-.tab[aria-selected="true"] { color: #154e3c; border-bottom: 3px solid #fcb30e; }
-.tab:focus-visible { outline-color: #154e3c; }
+.tab:focus, .belt-btn:focus { box-shadow: 0 0 0 .2rem rgba(21,78,60,.25); }
 
 h2 { color: #154e3c; border-left-color: #fcb30e; }
 h3 { color: #0d3a2d; }
@@ -66,8 +62,6 @@ h3 { color: #0d3a2d; }
 .rule { font-size: 1.02rem; }
 .note a, .cite a { color: #154e3c; font-weight: 700; }
 
-.belt-btn[aria-pressed="true"] { border-color: #fcb30e; box-shadow: 0 0 0 2px rgba(252,179,14,.4); }
-.belt-btn:focus-visible { outline-color: #154e3c; }
 .color-chip { color: #0d3a2d; }
 .measure-detail, .patch-legend { background: #f5f8f6; }
 .hotspot { background: #fcb30e; color: #0d3a2d; box-shadow: 0 0 0 2px rgba(21,78,60,.4); }
@@ -75,7 +69,6 @@ h3 { color: #0d3a2d; }
 .swatch-card .name { color: #0d3a2d; }
 .swatch-card.denied .chip-block::after { content: "NÃO PERMITIDO"; }
 .gi-preview { background: #fff; }
-.gi-explorer .belt-btn.blue { background: #2056AE; color: #fff; }
 .lightbox { background: rgba(8,38,29,.88); }
 
 /* ---------- Footer (CBJJ green, centered) ---------- */
