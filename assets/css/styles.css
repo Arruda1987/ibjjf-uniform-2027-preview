@@ -446,12 +446,12 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 /* Measurement markers: identical fully-bordered squares, placed immediately left of the label's first line */
 .measure-map { container-type: inline-size; }
 .hotspot {
-  --m: clamp(14px, 2.4cqw, 20px);
+  --m: clamp(12px, 2.4cqw, 20px);
   width: var(--m); height: var(--m);
   box-sizing: border-box; padding: 0;
   border: 2px solid var(--ibjjf-primary); border-radius: 0; box-shadow: none;
-  font-size: clamp(.5rem, 1.45cqw, .72rem); line-height: 1; overflow: visible;
+  font-size: clamp(.44rem, 1.45cqw, .72rem); line-height: 1; overflow: visible;
   transform: translate(calc(-100% - clamp(3px, .7cqw, 6px)), -50%);
 }
 .hotspot:hover, .hotspot[aria-pressed="true"] { border-color: var(--ibjjf-primary); box-shadow: inset 0 0 0 1px #fff; }
-@media (max-width: 576px) { .hotspot { width: var(--m); height: var(--m); font-size: clamp(.5rem, 1.45cqw, .72rem); } }
+@media (max-width: 576px) { .hotspot { width: var(--m); height: var(--m); font-size: clamp(.44rem, 1.45cqw, .72rem); } }
