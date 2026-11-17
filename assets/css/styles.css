@@ -241,7 +241,7 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
   border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(0,69,129,.35);
   font-family: var(--font-display); font-weight: 700; font-size: .72rem;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; padding: 0; transform: translate(-50%, -50%);
+  cursor: pointer; padding: 0; box-sizing: border-box; transform: translate(calc(-100% - 6px), -50%);
 }
 .hotspot:hover, .hotspot[aria-pressed="true"] { background: var(--ibjjf-primary); color: #fff; }
 .measure-detail {
@@ -332,4 +332,8 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
 .shorts-row { display:grid; grid-template-columns: 1.15fr .85fr; gap:1.15rem; align-items:start; }
 @media (max-width: 768px) {
   .shorts-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .hotspot { width: 20px; height: 20px; font-size: .68rem; }
 }

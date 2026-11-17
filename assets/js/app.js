@@ -230,7 +230,7 @@
       if (giImg && allowed && GI_ART[key]) {
         giImg.src = GI_ART[key];
         giImg.setAttribute("data-zoom", GI_ART[key]);
-        giImg.alt = "Official GI patch-area drawing in " + name + ". Teal areas are authorized for patches; green is the area allowed for a brand tag.";
+        giImg.alt = "Official GI patch-area drawing in " + name + ". Authorized patch areas are teal on a white GI and white on a royal blue or black GI; green is the area allowed for a brand tag.";
       }
       if (giLabel) giLabel.textContent = name;
       if (giNote) {
