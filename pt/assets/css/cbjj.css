@@ -64,7 +64,7 @@ h3 { color: #0d3a2d; }
 
 .color-chip { color: #0d3a2d; }
 .measure-detail, .patch-legend { background: #f5f8f6; }
-.hotspot { background: #fcb30e; color: #0d3a2d; box-shadow: 0 0 0 2px rgba(21,78,60,.4); }
+.hotspot { background: #fcb30e; color: #0d3a2d; }
 .hotspot:hover, .hotspot[aria-pressed="true"] { background: #154e3c; color: #fff; }
 .swatch-card .name { color: #0d3a2d; }
 .swatch-card.denied .chip-block::after { content: "NÃO PERMITIDO"; }
