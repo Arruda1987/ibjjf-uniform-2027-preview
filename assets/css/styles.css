@@ -368,3 +368,16 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
     transform: translateY(-50%);
   }
 }
+
+/* Language switch (EN | PT) */
+.lang-switch { display: inline-flex; border: 1px solid rgba(254,254,254,.45); border-radius: 999px; overflow: hidden; }
+.lang-switch .lang {
+  font-family: var(--font-display); font-weight: 700; font-size: .8rem; letter-spacing: .06em;
+  padding: .28rem .8rem; color: var(--ibjjf-white); line-height: 1.2;
+}
+.lang-switch .lang.is-current { background: var(--ibjjf-accent); color: var(--ibjjf-darkest); }
+.lang-switch a.lang:hover { background: rgba(254,254,254,.15); text-decoration: none; color: #fff; }
+@media (max-width: 768px) {
+  .header-inner { flex-wrap: nowrap; }
+  .header-actions { width: auto; margin-left: auto; }
+}
