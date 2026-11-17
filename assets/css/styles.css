@@ -409,3 +409,36 @@ ul.rules li, ol.rules li { margin: 0 0 .4rem; }
   .swatch-card .code { font-size: .78rem; }
   .swatch-card.denied .chip-block::after { font-size: .7rem; letter-spacing: .06em; }
 }
+
+/* Gi explorer: shared grid so both columns line up
+   (row 1 headings, row 2 subtitle, row 3 preview box = measurement image, row 4 color buttons = detail box) */
+.gi-explorer {
+  grid-template-columns: 270px minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto;
+  column-gap: 1.25rem; row-gap: 0; align-items: stretch;
+}
+.gi-explorer > .color-explorer, .gi-explorer > .measure-explorer { display: contents; }
+.gi-explorer h2 { margin: 0 0 .65rem; }
+.color-explorer > h2 { grid-area: 1 / 1; }
+.measure-explorer > h2 { grid-area: 1 / 2; }
+.measure-explorer > .caption { grid-area: 2 / 2; margin: 0 0 .65rem; }
+.color-explorer > .gi-preview {
+  grid-area: 3 / 1; display: flex; flex-direction: column; justify-content: center;
+}
+.color-explorer > .gi-preview svg, .color-explorer > .gi-preview .gi-color-stage { flex: 0 0 auto; }
+.measure-explorer > .measure-map { grid-area: 3 / 2; align-self: start; }
+.gi-explorer .color-buttons {
+  grid-area: 4 / 1; margin: .7rem 0 0; grid-auto-rows: 1fr; align-content: stretch;
+}
+.measure-explorer > .measure-detail { grid-area: 4 / 2; margin-top: .7rem; }
+.gi-explorer .color-buttons .belt-btn { align-items: center; height: 100%; }
+@media (max-width: 768px) {
+  .gi-explorer { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+  .gi-explorer h2, .gi-explorer .caption, .gi-explorer .gi-preview, .gi-explorer .color-buttons,
+  .gi-explorer .measure-map, .gi-explorer .measure-detail { grid-area: auto; }
+  .gi-explorer .measure-explorer > h2 { margin-top: 1.25rem; }
+  .measure-explorer > .measure-map { align-self: auto; }
+}
+
+/* No-Gi belt result and shorts rows: text column starts at the same top edge as the picture */
+.belt-result > div > h3:first-child, .shorts-row > div > h3:first-child { margin-top: 0; }
