@@ -4,7 +4,7 @@
   var BELTS = {
     white: {
       label: "White belt",
-      img: "../assets/img/nogi/en_white.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_white.jpg?v=20261117-1452",
       colors: [
         { name: "White (more than 50%)", hex: "#f4f4f4", border: "#ccc" },
         { name: "Black (secondary only)", hex: "#232020" }
@@ -14,7 +14,7 @@
     },
     grey: {
       label: "Grey belt",
-      img: "../assets/img/nogi/en_grey.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_grey.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -26,7 +26,7 @@
     },
     yellow: {
       label: "Yellow belt",
-      img: "../assets/img/nogi/en_yellow.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_yellow.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -38,7 +38,7 @@
     },
     orange: {
       label: "Orange belt",
-      img: "../assets/img/nogi/en_orange.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_orange.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -50,7 +50,7 @@
     },
     green: {
       label: "Green belt",
-      img: "../assets/img/nogi/en_green.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_green.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -62,7 +62,7 @@
     },
     blue: {
       label: "Blue belt",
-      img: "../assets/img/nogi/en_blue.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_blue.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -74,7 +74,7 @@
     },
     purple: {
       label: "Purple belt",
-      img: "../assets/img/nogi/en_purple.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_purple.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -86,7 +86,7 @@
     },
     brown: {
       label: "Brown belt",
-      img: "../assets/img/nogi/en_brown.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_brown.jpg?v=20261117-1452",
       colors: [
         { name: "Black", hex: "#232020" },
         { name: "White", hex: "#f4f4f4", border: "#ccc" },
@@ -98,7 +98,7 @@
     },
     black: {
       label: "Black belt",
-      img: "../assets/img/nogi/en_black.jpg?v=20261117-1600",
+      img: "../assets/img/nogi/en_black.jpg?v=20261117-1452",
       colors: [
         { name: "Black (more than 50%)", hex: "#232020" },
         { name: "White (secondary only)", hex: "#f4f4f4", border: "#ccc" },
@@ -215,10 +215,10 @@
   var giLabel = document.getElementById("gi-color-label");
   var giNote = document.getElementById("gi-color-note");
   var GI_ART = {
-    white: "../assets/img/site/gi-patches-white.png?v=20261117-1600",
-    royal: "../assets/img/site/gi-patches-royal.png?v=20261117-1600",
-    black: "../assets/img/site/gi-patches-black.png?v=20261117-1600",
-    navy: "../assets/img/site/gi-patches-navy.png?v=20261117-1600"
+    white: "../assets/img/site/gi-patches-white.png?v=20261117-1452",
+    royal: "../assets/img/site/gi-patches-royal.png?v=20261117-1452",
+    black: "../assets/img/site/gi-patches-black.png?v=20261117-1452",
+    navy: "../assets/img/site/gi-patches-navy.png?v=20261117-1452"
   };
   document.querySelectorAll("[data-gi-color]").forEach(function (btn) {
     btn.addEventListener("click", function () {
